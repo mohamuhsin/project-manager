@@ -8,6 +8,9 @@ export default function NewTask({ onAdd }) {
     }
 
     function handleClick() {
+        if (enteredTask.trim() === 0) {
+            return;
+        }
         onAdd(enteredTask);
         setEnteredTask("");
     }
